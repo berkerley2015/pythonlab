@@ -1,0 +1,170 @@
+Found a 29 line (271 tokens) duplication in the following files: 
+Starting at line 547 of G:\program\cpp\SolarRadiation-master\Orbit.cpp
+Starting at line 715 of G:\program\cpp\SolarRadiation-master\Orbit.cpp
+
+	double Xs, Ys;
+	
+	//calculate true local time
+	solar.MST = st.t.GMT + (st.s.longitude / 15.0);
+	solar.TST = solar.MST + solar.ET;
+	
+
+	//calculate solar hour angle 
+	solar.H = 15.0 * (solar.TST) * deg2rad; //matches with http://sky.ccny.cuny.edu/mn/pub/sunmooncalculator2.php
+	solar.H = pi - solar.H; //convert to morning positive and zero at noon
+	
+	//calculate zenith and cos zenith
+	solar.coszenith = sin (st.s.latitude* deg2rad) * sin (solar.gamma) + cos(st.s.latitude* deg2rad) * cos(solar.gamma) * cos(solar.H);
+	solar.zenith = acos(solar.coszenith);
+	solar.elevation = 90.0 - (solar.zenith)* rad2deg;
+	
+	//sin component
+	Ys = (-cos(solar.gamma) * sin(solar.H)) / cos (solar.elevation*deg2rad) ;
+	//cos component
+	Xs = ( sin(solar.elevation*deg2rad) * sin(st.s.latitude* deg2rad) - sin(solar.gamma))/ (cos (solar.elevation*deg2rad) * cos(st.s.latitude*deg2rad));
+	
+	solar.azimuth = pi + atan2(Ys,Xs);
+	
+	v = lamb - mvelpp;	 // true anomaly
+		
+	r = (meanr * (1.0 - pow(eccentricity,2.0))) / (1.0 + eccentricity * cos(v)); //same as r = meanr / sqrt(esdf);
+	
+	esdf = pow((a/r),2.0); //initialize eccentricity correction factor
+}
+=====================================================================
+Found a 25 line (220 tokens) duplication in the following files: 
+Starting at line 397 of G:\program\cpp\SolarRadiation-master\Orbit.cpp
+Starting at line 649 of G:\program\cpp\SolarRadiation-master\Orbit.cpp
+
+	years = date.year - 1950.0;
+	for (int i = 0; i < 47; ++i )
+		obsum += obamp[i] * asec2deg * cos((obrate[i] * asec2deg * years + obphase[i]) * deg2rad);
+	obliquity = 23.320556 + obsum;	//update class field obliquity
+
+	// Compute eccentricity, use class field array obphase, ecrate, and ecphase
+	for (int i = 0; i < 19; ++i )
+		cossum += ecamp[i] * cos ((ecrate[i]*asec2deg*years+ecphase[i])*deg2rad);
+		
+	for (int i = 0; i < 19; ++i )
+		sinsum += ecamp[i] * sin ((ecrate[i]*asec2deg*years+ecphase[i])*deg2rad);
+	
+	eccen2	= (cossum*cossum)+(sinsum*sinsum);
+	eccentricity = sqrt (eccen2);
+	eccen3 = eccen2*eccentricity;//update class field eccen2, eccentricity
+
+
+
+	// Compute moving vernal equinox longitude and longitude 0 of the mean sun
+	if ( fabs(cossum) <= 0.00000001 ) {
+		if ( sinsum == 0.0 ) fvelp = 0.0;
+		else if ( sinsum <= 0.0 ) fvelp = 1.5 * pi;
+		else if ( sinsum > 0.0 ) fvelp = 0.5 * pi;
+	}
+	else if ( cossum < 0.0 ) fvelp = atan(sinsum/cossum) + pi;
+=====================================================================
+Found a 24 line (202 tokens) duplication in the following files: 
+Starting at line 422 of G:\program\cpp\SolarRadiation-master\Orbit.cpp
+Starting at line 672 of G:\program\cpp\SolarRadiation-master\Orbit.cpp
+
+	else if (cossum > 0.0 ) {
+		if ( sinsum < 0.0 ) fvelp = atan (sinsum/cossum) + (2.0*pi);
+		else fvelp = atan (sinsum/cossum);
+	}
+	
+	//use class field mvamp, mvrate, mvphase
+	for (int i = 0; i < 78; ++ i )
+		mvsum += mvamp[i] * asec2deg * sin ((mvrate[i]*asec2deg*years+mvphase[i])*deg2rad);
+	
+	mvelp = fvelp / deg2rad + 50.439273 * asec2deg * years + 3.392506 + mvsum;
+	
+	while (mvelp < 0.0 ) 
+		mvelp += 360.0;
+	while (mvelp >= 360.0 )
+		mvelp -= 360.0;
+	//update class field mvelp
+	
+	//use class field eccen2, eccentricity
+	mvelp += 180.0;
+	mvelpp = mvelp * deg2rad;
+	beta = sqrt (1.0 - eccen2);
+	lambm0 = 2.0 * ((0.5*eccentricity + 0.125 * eccen3) *(1.0 + beta) * sin(mvelpp) -
+		0.25 * eccen2 * (0.5 + beta) * sin (2.0*mvelpp) +
+		0.125 * eccen3 * (1.0/3.0 + beta) * sin (3.0 * mvelpp));
+=====================================================================
+Found a 17 line (190 tokens) duplication in the following files: 
+Starting at line 488 of G:\program\cpp\SolarRadiation-master\Orbit.cpp
+Starting at line 697 of G:\program\cpp\SolarRadiation-master\Orbit.cpp
+
+	lambm = lambm0 + (CalendarDay - 80) * 2.0 * pi / 365.0; //mean longitude of the Sun
+	lmm = lambm - mvelpp; //Mean anomaly
+	
+	//to match berger 1978:
+	lamb = lambm + (2*eccentricity - 0.25*eccen3)*sin(lmm) +
+				1.25*eccen2*sin(2.0*lmm) +
+				(13.0/12.0)*eccen3*sin(3.0*lmm); //// Longitude of true Sun
+	
+	//declination
+	solar.gamma = asin (sin(obliquity*deg2rad)*sin(lamb));
+
+	//Equation of time
+	yy = pow(tan((obliquity*deg2rad)/2.0),2);
+	solar.ET = yy*sin(2*lambm) - 2*eccentricity*sin(lmm) + 4*eccentricity*yy*sin(lmm)*cos(2*lambm) - 0.5*pow(yy,2)*sin(4*lambm) - (5.0/4.0)*pow(eccentricity,2)*sin(2*lmm);
+
+	//convert ET from cosec to second using: cosec 1sec = 206265/15
+	solar.ET = (solar.ET * 206265.0/15.0)/3600; //in hours	
+=====================================================================
+Found a 30 line (134 tokens) duplication in the following files: 
+Starting at line 431 of G:\program\cpp\SolarRadiation-master\Integration.cpp
+Starting at line 484 of G:\program\cpp\SolarRadiation-master\Integration.cpp
+
+	infile3.close();
+
+
+	for (i = 0; i < days_counter; i++)
+	{	
+		xxx[i] = i; //initialize the days (x axis) start with 0 (could also start qitth 1 only the interval is important)
+		irradiance.ReadBinary_ToLayer(i+1, file_output_integrated_path + str_file_names[i]);
+
+		cout << file_output_integrated_path + str_file_names[i] << endl;
+	}
+
+
+	// //perform integration
+	for (i = 0; i < (nlines * ncolumns); i++)
+		//for (i = 15; i < 16; i++)
+	{
+		for (j = 0; j < (days_counter); j++)
+		{
+			yyy[j] = irradiance.ExtractValue(j+1, i);
+			//	cout << yyy[j] << " " << xxx[j] << endl;
+		}
+		// // //integrate
+		area = integrate_simpson(xxx, yyy, (days_counter), 0.2);
+
+		//cout << area << endl;		
+		integrated.AssignValue(1, i, area);
+	}
+
+	// //construct output file  name
+	file_name_out = "Period_integ_diffuse";
+=====================================================================
+Found a 15 line (110 tokens) duplication in the following files: 
+Starting at line 559 of G:\program\cpp\SolarRadiation-master\Terrain.cpp
+Starting at line 650 of G:\program\cpp\SolarRadiation-master\Terrain.cpp
+
+	}
+
+	sumx = sumy = sumx2 = sumy2 = 0.0;
+	for (int i = 0; i < N; ++i ) {
+		sumx += x[i];
+		sumy += y[i];
+		sumx2 += x[i]*x[i];
+		sumy2 += y[i]*y[i];
+	}
+
+	for (int i = start; i < nlines - start; ++i ){
+
+		for (int j = start; j < ncolumns - start; ++j ) {
+
+			int index = (i * ncolumns) + j;
+

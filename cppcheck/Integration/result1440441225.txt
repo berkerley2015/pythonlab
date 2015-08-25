@@ -1,0 +1,202 @@
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:568]: (style) The scope of the variable 'alpha' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:661]: (style) The scope of the variable 'Tr_R' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:661]: (style) The scope of the variable 'Tr_A' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:661]: (style) The scope of the variable 'Tr_O' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:661]: (style) The scope of the variable 'Tr_W' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:661]: (style) The scope of the variable 'Tr_T' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:662]: (style) The scope of the variable 'lambda' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:662]: (style) The scope of the variable 'f_w' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:662]: (style) The scope of the variable 'n' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:662]: (style) The scope of the variable 'c' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:662]: (style) The scope of the variable 'Bw' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:663]: (style) The scope of the variable 'E_r' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:663]: (style) The scope of the variable 'E_a' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:663]: (style) The scope of the variable 'E_dh' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:664]: (style) The scope of the variable 'optical_depth_a' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:665]: (style) The scope of the variable 'T_aa' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:665]: (style) The scope of the variable 'T_as' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:666]: (style) The scope of the variable 'F_s' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:666]: (style) The scope of the variable 'g_a' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:667]: (style) The scope of the variable 'A_lg' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:667]: (style) The scope of the variable 'A_fs' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:667]: (style) The scope of the variable 'B_fs' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:669]: (style) The scope of the variable 'lambda2' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:669]: (style) The scope of the variable 'lambda4' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:669]: (style) The scope of the variable 'lambda_alpha' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:35]: (warning) Member variable 'Atmosphere::Pr' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:35]: (warning) Member variable 'Atmosphere::P_water' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:35]: (warning) Member variable 'Atmosphere::Temp' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.cpp:35]: (warning) Member variable 'Atmosphere::WaterMixingR' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Spectra.h:68]: (style) 'Spectra::operator=' should return 'Spectra &'.
+[G:\program\cpp\SolarRadiation-master\Atmosphere.h:22]: (style) 'class Atmosphere' does not have a copy constructor which is recommended since the class contains a pointer to allocated memory.
+[G:\program\cpp\SolarRadiation-master\Spectra.h:54]: (style) Class 'Spectra' has a constructor with 1 argument that is not explicit.
+[G:\program\cpp\SolarRadiation-master\Spectra.h:60]: (style) Class 'Spectra' has a constructor with 1 argument that is not explicit.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:201]: (style) The scope of the variable 'pos1' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:202]: (style) The scope of the variable 'pos2' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:283]: (style) The scope of the variable 'area' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:146]: (error) Memory leak: new_xxx
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:146]: (error) Memory leak: new_yyy
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:324]: (error) Memory leak: xxx
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:324]: (error) Memory leak: yyy
+[G:\program\cpp\SolarRadiation-master\Terrain.h:74]: (performance) Function parameter 'filename' should be passed by reference.
+[G:\program\cpp\SolarRadiation-master\Terrain.h:92]: (performance) Function parameter 'filename' should be passed by reference.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:324]: (performance) Returning the result of c_str() in a function that returns std::string is slow and redundant.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:266]: (style) The scope of the variable 'ja' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::eccentricity' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::eccen2' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::obliquity' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::v' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::lamb' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::AU' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::lambda' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::MeanEarthSunDistance' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::lmm' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::lambm' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::lambm0' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::mvelp' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::esdf' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:194]: (warning) Member variable 'Orbit::r' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::v' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::lamb' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::AU' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::lambda' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::MeanEarthSunDistance' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::lmm' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::lambm' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::esdf' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:222]: (warning) Member variable 'Orbit::r' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Orbit.h:152]: (style) Class 'Orbit' has a constructor with 1 argument that is not explicit.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:431]: (error) Uninitialized variable: fvelp
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:680]: (error) Uninitialized variable: fvelp
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::Ro' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::Rp' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::Rm' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::x' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::y' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::z' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::D0' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::D1' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::AU' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::day_angle' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::day_number' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::gamma' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::et' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::tzone' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::resolution' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::false_northing' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::false_easting' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::lgo' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::lto' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::Xo' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::Yo' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::S' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::g0' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:35]: (warning) Member variable 'Planet::g' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::Ro' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::Rp' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::Rm' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::x' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::y' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::z' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::D0' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::D1' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::AU' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::day_angle' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::day_number' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::gamma' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::et' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::tzone' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::resolution' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::Xo' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::Yo' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::g0' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Planet.cpp:78]: (warning) Member variable 'Planet::g' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Spectra.cpp:138]: (style) The scope of the variable 'counter' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Spectra.cpp:183]: (style) The scope of the variable 'j' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Spectra.cpp:184]: (style) The scope of the variable 'found' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Spectra.cpp:466]: (style) The scope of the variable 'found' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Spectra.cpp:394]: (style) Variable 'delta_x' is assigned a value that is never used.
+[G:\program\cpp\SolarRadiation-master\Spectra.cpp:23]: (warning) Member variable 'Spectra::data_spectra' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:66]: (style) C-style pointer casting
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:110]: (style) C-style pointer casting
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:488] -> [G:\program\cpp\SolarRadiation-master\Terrain.cpp:492]: (performance) Variable 'index' is reassigned a value before the old one has been used.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:492] -> [G:\program\cpp\SolarRadiation-master\Terrain.cpp:498]: (performance) Variable 'index' is reassigned a value before the old one has been used.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:498] -> [G:\program\cpp\SolarRadiation-master\Terrain.cpp:502]: (performance) Variable 'index' is reassigned a value before the old one has been used.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:638]: (style) Statements following return, break, continue, goto or throw will never be executed.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:758]: (style) The scope of the variable 'y1' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:758]: (style) The scope of the variable 'x1' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:758]: (style) The scope of the variable 'x2' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:758]: (style) The scope of the variable 'y2' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:758]: (style) The scope of the variable 'Q11' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:758]: (style) The scope of the variable 'Q12' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:758]: (style) The scope of the variable 'Q22' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:758]: (style) The scope of the variable 'Q21' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:760]: (style) The scope of the variable 'fR1' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:760]: (style) The scope of the variable 'fR2' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:978]: (style) The scope of the variable 'Y' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:502]: (style) Variable 'index' is assigned a value that is never used.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:468]: (style) Variable 's' is not assigned a value.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:469]: (style) Variable 't' is not assigned a value.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:969]: (style) Variable 's' is not assigned a value.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:970]: (style) Variable 't' is not assigned a value.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:35]: (warning) Member variable 'Terrain::resolution' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:35]: (warning) Member variable 'Terrain::half_resolution' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:35]: (warning) Member variable 'Terrain::esdf' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:35]: (warning) Member variable 'Terrain::D' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:35]: (warning) Member variable 'Terrain::ngrids' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:58]: (warning) Member variable 'Terrain::resolution' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:58]: (warning) Member variable 'Terrain::half_resolution' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:58]: (warning) Member variable 'Terrain::esdf' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:58]: (warning) Member variable 'Terrain::D' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:58]: (warning) Member variable 'Terrain::ngrids' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:102]: (warning) Member variable 'Terrain::esdf' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:102]: (warning) Member variable 'Terrain::D' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:102]: (warning) Member variable 'Terrain::ngrids' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:150]: (warning) Member variable 'Terrain::resolution' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:150]: (warning) Member variable 'Terrain::half_resolution' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:150]: (warning) Member variable 'Terrain::esdf' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:150]: (warning) Member variable 'Terrain::D' is not initialized in the constructor.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:190]: (warning) Member variable 'Terrain::esdf' is not assigned a value in 'Terrain::operator='.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:190]: (warning) Member variable 'Terrain::D' is not assigned a value in 'Terrain::operator='.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:190]: (warning) Member variable 'Terrain::ngrids' is not assigned a value in 'Terrain::operator='.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:190]: (warning) Member variable 'Terrain::data2' is not assigned a value in 'Terrain::operator='.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:235]: (performance) Function parameter 'filename' should be passed by reference.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:300]: (performance) Function parameter 'filename' should be passed by reference.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:472]: (error) Uninitialized struct member: s.latitude
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:472]: (error) Uninitialized struct member: s.longitude
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:471]: (error) Uninitialized struct member: t.CalendarDayNumber
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:471]: (error) Uninitialized struct member: t.hours
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:471]: (error) Uninitialized struct member: t.minutes
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:471]: (error) Uninitialized struct member: t.seconds
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:471]: (error) Uninitialized struct member: t.year
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:471]: (error) Uninitialized struct member: t.GMT
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:973]: (error) Uninitialized struct member: s.latitude
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:973]: (error) Uninitialized struct member: s.longitude
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:972]: (error) Uninitialized struct member: t.CalendarDayNumber
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:972]: (error) Uninitialized struct member: t.hours
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:972]: (error) Uninitialized struct member: t.minutes
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:972]: (error) Uninitialized struct member: t.seconds
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:972]: (error) Uninitialized struct member: t.year
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:972]: (error) Uninitialized struct member: t.GMT
+[G:\program\cpp\SolarRadiation-master\use.cpp:58]: (style) Unused variable: file_name
+[G:\program\cpp\SolarRadiation-master\use.cpp:239]: (style) Unused variable: file_names2
+[G:\program\cpp\SolarRadiation-master\use.cpp:133]: (error) Uninitialized struct member: date_start.month
+[G:\program\cpp\SolarRadiation-master\use.cpp:134]: (error) Uninitialized struct member: date_start.day
+[G:\program\cpp\SolarRadiation-master\use.cpp:132]: (error) Uninitialized struct member: date_start.year
+[G:\program\cpp\SolarRadiation-master\use.cpp:272]: (error) Uninitialized struct member: date_start.year
+[G:\program\cpp\SolarRadiation-master\use.cpp:137]: (error) Uninitialized struct member: date_end.month
+[G:\program\cpp\SolarRadiation-master\use.cpp:138]: (error) Uninitialized struct member: date_end.day
+[G:\program\cpp\SolarRadiation-master\use.cpp:136]: (error) Uninitialized struct member: date_end.year
+[G:\program\cpp\SolarRadiation-master\use.cpp:272]: (error) Uninitialized struct member: date_end.year
+[G:\program\cpp\SolarRadiation-master\use.cpp:215]: (error) Uninitialized variable: UTM_easting
+[G:\program\cpp\SolarRadiation-master\use.cpp:215]: (error) Uninitialized variable: UTM_northing
+[G:\program\cpp\SolarRadiation-master\use.cpp:215]: (error) Uninitialized variable: central_meridian
+[G:\program\cpp\SolarRadiation-master\use.cpp:272]: (error) Uninitialized variable: years_inc
+[G:\program\cpp\SolarRadiation-master\use.cpp:206]: (error) Uninitialized variable: resolution
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:1204]: (style) The function 'DisplayData' is never used.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:272]: (style) The function 'DisplayElevation' is never used.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:14]: (style) The function 'DrawLine' is never used.
+[G:\program\cpp\SolarRadiation-master\Orbit.cpp:264]: (style) The function 'JulianDayNumber' is never used.
+[G:\program\cpp\SolarRadiation-master\Terrain.cpp:1125]: (style) The function 'ReadBinary' is never used.
+[G:\program\cpp\SolarRadiation-master\Spectra.cpp:260]: (style) The function 'integrate_trapezoid' is never used.
+(information) Cppcheck cannot find all the include files (use --check-config for details)
