@@ -5,14 +5,23 @@ from os.path import exists
 logging.basicConfig(level=logging.INFO)
 
 #This function is used to assemble command string
-def commandAssembly(functionKey, testeeDir, testeeResultDir, resultFile):  
+def commandAssembly(functionKey, testeeDir, testeeResultDir, resultFileName):  
 	#function--map key, testeeDir--test file directory, testeeResultDir--test result directory, resultFile--initial name of the result file
-	functionName = commandTemplateMap[functionKey][0]
-	functionArgs = commandTemplateMap[functionKey][1]
+	functionTuple = commandTemplateMap[functionKey]
+	functionName = functionTuple[0]
+	functionArgs = functionTuple[1]
+	
 	functionCall = functionName + ' ' + functionArgs
-	resultFileName = functionKey + '-' + resultFile + '-' + str(int(time.time())) + '.txt'
+	if len(functionTuple) == 3:  #indicate there is a command loader attached
+		functionCall = functionTuple[2] + ' ' + functionCall
+	#endof if(functionTuple) == 3
+	#resultFileName = functionKey + '-' + resultFile + '-' + str(int(time.time())) + '.txt'
 	resultFileDir = os.path.join(testeeResultDir, resultFileName)
+	#logging.info('functionCall is-->%s' % functionCall)
+	#print 'functionCall is-->%s' % functionCall
 	command = functionCall % (testeeDir, resultFileDir)
+	#logging.info('command is-->%s' % command)
+	print 'command is-->%s' % command
 	return command
 #endof callFunction(function)
 
@@ -20,8 +29,10 @@ def commandAssembly(functionKey, testeeDir, testeeResultDir, resultFile):
 absolutePath = os.path.dirname(os.path.abspath(__file__))
 resultFile = 'result'
 commandTemplateMap = {
-	'cppcheck' : (r'D:\Tools\Cppcheck\cppcheck.exe', '--enable=all %s 2> %s'),
-	'pmd' : (r'D:\Tools\PMD\pmd-bin-5.3.3\bin\cpd.bat', '--minimum-tokens 100 --files %s --language cpp > %s')
+	'cppcheck' : (r'D:\Tools\Cppcheck\cppcheck.exe', '--enable=all %s 2> %s'),  
+	#the first element in the tuple is the address of the command and the second the needed arguments
+	'pmd' : (r'D:\Tools\PMD\pmd-bin-5.3.3\bin\cpd.bat', '--minimum-tokens 100 --files %s --language cpp > %s'),
+	'cpplint' : (r'D:\Tools\styleguide\cpplint\cpplint.py', '%s 2> %s', 'python')
 }
 
 #1. Get the selected software ready
@@ -65,25 +76,27 @@ else: #1.2.2 if testeeResultDir is a file
 #endof if...else...
 
 #1.2.2 Get the resultFile absolute path ready
+resultFileName = functionKey + '-' + resultFile + '-' + str(int(time.time())) + '.txt'
 
-
-#2. Subprocess call the software and generate outputs
+#2. Subprocess calljlk the software and generate outputs
 try:
 	if not functionKey == 'all':
-		command = commandAssembly(functionKey, testeeDir, testeeResultDir, resultFile)
+		
+		command = commandAssembly(functionKey, testeeDir, testeeResultDir, resultFileName)
 		print 'command is:', command
-		subprocess.Popen(command, shell=True)
-		print 'resule %s gets generated' % resultFileName
+		subprocess.call(command, shell=True)
+		print 'result %s gets generated' % resultFileName
 	else:  #call all 
 		#pass  #need finishing later
 		for functionKey in commandTemplateMap:
 			#pdb.set_trace()
-			logging.info('functionKey is %s' % functionKey)
-			command = commandAssembly(functionKey, testeeDir, testeeResultDir, resultFile)
+			#logging.info('functionKey is %s' % functionKey)
+			command = commandAssembly(functionKey, testeeDir, testeeResultDir, resultFileName)
 			subprocess.call(command, shell=True)
 		#endof for...in...
 except StandardError, e:
 	print 'Encounter StandardError: ', e
+	#raise StandardError('Problem encountered!')
 #resultFile.close()
 #endof open(resultDir, 'a') as resultFile:
 

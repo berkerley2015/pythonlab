@@ -1,0 +1,14 @@
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:201]: (style) The scope of the variable 'pos1' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:202]: (style) The scope of the variable 'pos2' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:283]: (style) The scope of the variable 'area' can be reduced.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:146]: (error) Memory leak: new_xxx
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:146]: (error) Memory leak: new_yyy
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:324]: (error) Memory leak: xxx
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:324]: (error) Memory leak: yyy
+[G:\program\cpp\SolarRadiation-master\Terrain.h:74]: (performance) Function parameter 'filename' should be passed by reference.
+[G:\program\cpp\SolarRadiation-master\Terrain.h:92]: (performance) Function parameter 'filename' should be passed by reference.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:324]: (performance) Returning the result of c_str() in a function that returns std::string is slow and redundant.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:14]: (style) The function 'DrawLine' is never used.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:165]: (style) The function 'IntegrateDay' is never used.
+[G:\program\cpp\SolarRadiation-master\Integration.cpp:335]: (style) The function 'IntegratePeriod' is never used.
+(information) Cppcheck cannot find all the include files (use --check-config for details)
